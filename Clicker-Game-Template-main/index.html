@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ムカつく上司を倒すゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- TOP画面 -->
+    <div id="top-screen">
+        <h1>ムカつく上司を倒すゲーム</h1>
+        <div class="center-content">
+            <p>ムカつく人をぼこぼこにしてスカッとするだけのゲームです。<br>
+            アナタの最も嫌いな人の性別を教えてくれますか。</p>
+            <button id="male-btn">男</button>
+            <button id="female-btn">女</button>
+            <button id="neutral-btn">どちらでもない</button>
+        </div>
+    </div>
+
+    <!-- 武器選択画面 -->
+    <div id="weapon-screen" style="display: none;">
+        <h1>ムカつく上司を倒すゲーム</h1>
+        <p id="weapon-text"></p>
+        <button id="brass-knuckles" title="20%の確率で、ワンクリックの効果が5倍になる">メリケンサック</button>
+        <button id="stun-gun" title="20%の確率で相手が攻撃できなくなる">スタンガン</button>
+        <button id="flamethrower" title="1クリックの効果が2倍になる">火炎放射器</button>
+        <p>武器の上にマウスを乗せると効果が見れます。</p>
+    </div>
+
+    <!-- 武器確認画面 -->
+    <div id="weapon-confirm-screen" style="display: none;">
+        <h1>ムカつく上司を倒すゲーム</h1>
+        <p>選択した武器: <span id="selected-weapon-name"></span></p>
+        <p>効果: <span id="selected-weapon-effect"></span></p>
+        <p>この武器で本当によろしいですか？</p>
+        <button id="yes-btn">はい</button>
+        <button id="no-btn">いいえ</button>
+    </div>
+
+    <!-- クリッカー画面 -->
+    <div id="clicker-screen" style="display: none;">
+        <h2>クソ上司（モンスター）が現れた！</h2>
+        <div class="clicker-content">
+            <span id="monster-hp">20</span>
+            <img id="monster-img" src="doge.png" alt="モンスターをクリックしてください">
+        </div>
+        <p id="boss-phrase"></p>
+        <p class="monster-label">クソ上司（モンスター）</p>
+        <div class="info-content">
+            <table>
+                <tr>
+                    <th>プレイヤーHP</th>
+                    <td id="player-hp">100</td>
+                </tr>
+                <tr>
+                    <th>総クリック数</th>
+                    <td id="total-clicks">0</td>
+                </tr>
+                <tr>
+                    <th>倒したモンスターの数</th>
+                    <td id="monster-count">0</td>
+                </tr>
+                <tr>
+                    <th>現在の武器</th>
+                    <td id="weapon-name"></td>
+                </tr>
+                <tr>
+                    <th>武器の効果</th>
+                    <td id="weapon-effect"></td>
+                </tr>
+            </table>
+        </div>
+        <p id="monster-defeated" style="display: none;">モンスターを倒した！</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

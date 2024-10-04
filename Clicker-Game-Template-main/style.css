@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.center-content {
+    margin-top: 50px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+#weapon-screen button {
+    position: relative;
+}
+
+#weapon-screen button:hover::after {
+    content: attr(title);
+    position: absolute;
+    left: 50%;
+    bottom: -30px;
+    transform: translateX(-50%);
+    background: #000;
+    color: #fff;
+    padding: 5px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+#clicker-screen {
+    margin-top: 20px;
+}
+
+.clicker-content {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+#monster-img {
+    cursor: pointer;
+    width: 300px;
+    height: auto;
+}
+
+#monster-hp {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+}
+
+#boss-phrase {
+    font-style: italic;
+    font-weight: bold;
+    margin: 20px 0;
+    color: red;
+    font-size: 1.5em;
+}
+
+#monster-defeated {
+    color: green;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.info-content {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 60%;
+    margin: 0 auto;
+}
+
+table, th, td {
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.monster-label {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
